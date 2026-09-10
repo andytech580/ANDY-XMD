@@ -10,7 +10,7 @@ async function githubCommand(sock, chatId, message) {
     if (!res.ok) throw new Error('Error fetching repository data');
     const json = await res.json();
 
-    let txt = `*乂  ANDY-XMD  乂*\n\n`;
+    let txt = `*乂  https://github.com/andytech580/ANDY-XMD  乂*\n\n`;
 
     // Use the local asset image
     const imgPath = path.join(__dirname, '../assets/bot_image.jpg');
