@@ -132,14 +132,22 @@ async function handleAutotypingForMessage(sock, chatId, userMessage) {
             await new Promise(resolve => setTimeout(resolve, 500));
             
             // Then send the composing status
+            if (chatId.endsWith('@g.us')) {
+                return;
+            } else{
             await sock.sendPresenceUpdate('recording', chatId);
+            }
             
             // Simulate typing time based on message length with increased minimum time
             const typingDelay = Math.max(3000, Math.min(8000, userMessage.length * 150));
             await new Promise(resolve => setTimeout(resolve, typingDelay));
             
             // Send composing again to ensure it stays visible
+            if (chatId.endsWith('@g.us')) {
+                return;
+            } else{
             await sock.sendPresenceUpdate('recording', chatId);
+            }
             await new Promise(resolve => setTimeout(resolve, 1500));
             
             // Finally send paused status
