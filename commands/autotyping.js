@@ -1,7 +1,4 @@
-/**
- * Knight Bot - A WhatsApp Bot
- * Autotyping Command - Shows fake typing status
- */
+
 
 const fs = require('fs');
 const path = require('path');
@@ -128,7 +125,11 @@ async function handleAutotypingForMessage(sock, chatId, userMessage) {
             await sock.presenceSubscribe(chatId);
             
             // Send available status first
+            if (chatId.endsWith('@g.us')) {
+                return;
+            } else{
             await sock.sendPresenceUpdate('available', chatId);
+            }
             await new Promise(resolve => setTimeout(resolve, 500));
             
             // Then send the composing status
