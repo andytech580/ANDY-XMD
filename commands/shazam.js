@@ -23,7 +23,7 @@ async function shazamCommand(sock, chatId, message, qMessage) {
 
             const quoted = {
                 message: qMessage.audioMessage
-                    ? { audioMessage: quotedMessage.audioMessage }
+                    ? { audioMessage: qMessage.audioMessage }
                     : { videoMessage: qMessage.videoMessage }
             };
 
