@@ -113,7 +113,6 @@ async function helpCommand(sock, chatId, message) {
 ╰═════Aɴᴅʏ-Tᴇᴄʜ❦══════❏
 
 ╭════〔 🤖 *AI Commands* 〕═══❏
-│┃➥ .gpt <question>
 │┃➥ .gemini <question>
 │┃➥ .imagine <prompt>
 │┃➥ .flux <prompt>
@@ -158,7 +157,7 @@ async function helpCommand(sock, chatId, message) {
 ╭════〔 📥 *Downloader* 〕═══❏
 │┃➥ .play <song_name>
 │┃➥ .song <song_name>
-│┃➥ .spotify <query>
+│┃➥ .shazam <reply to audio/video>
 │┃➥ .instagram <link>
 │┃➥ .facebook <link>
 │┃➥ .tiktok <link>
