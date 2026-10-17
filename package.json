@@ -21,7 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-   "adm-zip": "^0.5.16",
+    "adm-zip": "^0.5.16",
     "acrcloud": "^1.4.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@ffmpeg/ffmpeg": "^0.12.15",
@@ -79,5 +79,11 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "allowScripts": {
+    "sharp": true,
+    "@whiskeysockets/baileys": true,
+    "protobufjs": true,
+    "es5-ext": true
   }
 }
